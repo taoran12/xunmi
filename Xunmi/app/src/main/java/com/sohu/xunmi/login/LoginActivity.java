@@ -1,7 +1,6 @@
 package com.sohu.xunmi.login;
 
 import android.app.Activity;
-<<<<<<< Updated upstream
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,12 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-=======
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.sohu.xunmi.MainActivity;
->>>>>>> Stashed changes
 import com.sohu.xunmi.R;
 
 
@@ -31,7 +24,7 @@ public class LoginActivity extends Activity implements DialogInterface.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login_activity);
-<<<<<<< Updated upstream
+
         loginName = (EditText) findViewById(R.id.loginName);
         loginButton = (Button) findViewById(R.id.loginButton);
         loginPass = (EditText) findViewById(R.id.loginPassword);
@@ -59,9 +52,5 @@ public class LoginActivity extends Activity implements DialogInterface.OnClickLi
     @Override
     public boolean onLongClick(View view) {
         return false;
-=======
-
-
->>>>>>> Stashed changes
     }
 }
