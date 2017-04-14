@@ -13,9 +13,9 @@ import com.sohu.xunmi.R;
 
 
 public class TagIWantActivity extends AppCompatActivity implements View.OnClickListener {
-    private String lableName[] = {"a", "b", "c"
+    private String lableName[] = {"SingleDog", "lazyToDeath", "DreamEveryDay"
     };
-    private String lableName1[] = {"d", "e", "f", "g", "h"
+    private String lableName1[] = {"AddSlary", "LevelUpToCEO", "MarryABeaty"
     };
     LabelLayout labelLayout, labelLayoutall;
     ViewGroup.MarginLayoutParams lp;
@@ -30,6 +30,7 @@ public class TagIWantActivity extends AppCompatActivity implements View.OnClickL
                 Intent intent = new Intent();
                 intent.setClass(TagIWantActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
 
         });

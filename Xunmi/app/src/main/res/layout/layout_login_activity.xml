@@ -15,7 +15,7 @@
         android:layout_marginBottom="12dp"
         android:layout_weight="0.80"
         android:hint="nickname"
-        android:maxLines="1"
+        android:singleLine="true"
         android:textAlignment="center" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="173dp"
         android:layout_weight="0.14"
-        android:background="@android:color/darker_gray"
+        android:background="@android:color/holo_blue_light"
         android:elevation="11dp"
         android:text="next"
         android:textAlignment="center"

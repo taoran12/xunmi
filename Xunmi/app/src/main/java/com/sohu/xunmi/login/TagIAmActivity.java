@@ -13,9 +13,9 @@ import com.sohu.xunmi.R;
 
 
 public class TagIAmActivity extends AppCompatActivity implements View.OnClickListener {
-    private String lableName[] = {"a", "b", "c"
+    private String lableName[] = {"SingleDog", "lazyToDeath", "DreamEveryDay"
     };
-    private String lableName1[] = {"d", "e", "f", "g", "h"
+    private String lableName1[] = {"AddSlary", "LevelUpToCEO", "MarryABeaty"
     };
 
     @Override
@@ -29,6 +29,7 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent();
                 intent.setClass(TagIAmActivity.this, TagIWantActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         initData();

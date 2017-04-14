@@ -32,9 +32,10 @@ public class LoginActivity extends Activity {
             public void onClick(View view) {
                 Editable userName = loginName.getText();
                 Editable userPassword = loginPass.getText();
-                System.out.println(userName.toString());
-                System.out.println(userPassword.toString());
+
                 //push name&password
+
+
                 Intent intent = new Intent();
                 intent.setClass(LoginActivity.this, TagIAmActivity.class);
                 startActivity(intent);
