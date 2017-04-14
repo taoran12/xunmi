@@ -3,17 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0F0F0"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="I am" />
+        android:text="I want" />
 
     <com.sohu.xunmi.login.LabelLayout
-        android:id="@+id/iam_flow"
+        android:id="@+id/iwant_flow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -27,17 +28,19 @@
         android:text="All" />
 
     <com.sohu.xunmi.login.LabelLayout
-        android:id="@+id/iam_flow_all"
+        android:id="@+id/iwant_flow_all"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:animateLayoutChanges="true" />
 
     <Button
-        android:id="@+id/iam_button"
-        style="@android:style/Widget.DeviceDefault.Button"
+        android:id="@+id/iwant_button"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:text="Iwant" />
+        android:text="finish"
+        android:textAlignment="center" />
+
 </LinearLayout>

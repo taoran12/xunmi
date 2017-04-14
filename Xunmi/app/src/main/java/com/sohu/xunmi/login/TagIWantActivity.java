@@ -1,6 +1,7 @@
 package com.sohu.xunmi.login;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,32 +9,34 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.sohu.xunmi.MainActivity;
 import com.sohu.xunmi.R;
 
+import java.util.ArrayList;
 
 
-public class TagIAmActivity extends AppCompatActivity implements View.OnClickListener {
+public class TagIWantActivity extends AppCompatActivity implements View.OnClickListener {
     private String lableName[] = {"a","b"
     };
     private String lableName1[] = {"c","d","e","f"
     };
-    Button iWantButton;
+    ArrayList<String> stringArrayList = new ArrayList<>();
+    Button finishButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        iWantButton = (Button) findViewById(R.id.iam_button);
-//        iWantButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //
-//
-//                //
-//                Intent intent = new Intent();
-//
-//                intent.setClass(TagIAmActivity.this, TagIAmActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        finishButton = (Button)findViewById(R.id.iwant_button);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //
+
+                //
+                Intent intent = new Intent();
+                intent.setClass(TagIWantActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         initData();
         initView();
     }
@@ -50,8 +53,8 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
         lp.topMargin = 5;
         lp.bottomMargin = 5;
 
-        labelLayout = (LabelLayout) findViewById(R.id.iam_flow);
-        labelLayoutall = (LabelLayout) findViewById(R.id.iam_flow_all);
+        labelLayout = (LabelLayout) findViewById(R.id.iwant_flow);
+        labelLayoutall = (LabelLayout) findViewById(R.id.iwant_flow_all);
         for (String aLableName : lableName) {
             TextView view = new TextView(this);
             view.setText(aLableName);
