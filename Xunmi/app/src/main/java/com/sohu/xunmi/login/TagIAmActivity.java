@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.sohu.xunmi.MainActivity;
 import com.sohu.xunmi.R;
 
 
@@ -28,7 +29,6 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent();
                 intent.setClass(TagIAmActivity.this, TagIWantActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         initData();

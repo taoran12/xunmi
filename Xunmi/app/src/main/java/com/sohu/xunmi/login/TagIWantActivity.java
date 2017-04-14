@@ -22,8 +22,8 @@ public class TagIWantActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_tag_iam_activity);
-        Button next = (Button) findViewById(R.id.iam_button);
+        setContentView(R.layout.layout_tag_iwant_activity);
+        Button next = (Button) findViewById(R.id.iwant_button);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
