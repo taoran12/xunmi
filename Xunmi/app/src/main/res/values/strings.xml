@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Xunmi</string>
     <string name="title_1">title</string>
+    <string name="bottom_tab_xunmi">寻觅</string>
+    <string name="bottom_tab_list">历史</string>
+    <string name="bottom_tab_profile">个人</string>
 </resources>

@@ -7,8 +7,8 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
         android:layout_gravity="top"
         android:clipToPadding="false"
         android:overScrollMode="never"
@@ -17,19 +17,81 @@
         android:paddingLeft="@dimen/card_padding"
         android:paddingRight="@dimen/card_padding"
         android:paddingStart="@dimen/card_padding" />
+    <!-- 底部tab -->
     <LinearLayout
+        android:id="@+id/ll_bottom_tab"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-        <Button
-        android:layout_width="20dp"
-        android:layout_height="20dp" />
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+        <RelativeLayout
+            android:id="@+id/rl_know"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+            <ImageView
+                android:id="@+id/iv_know"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/footprint"
+                android:contentDescription="@null"/>
+            <TextView
+                android:id="@+id/tv_know"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/iv_know"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bottom_tab_list"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_xunmi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+            <ImageView
+                android:id="@+id/iv_i_want_know"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/search"
+                android:contentDescription="@null" />
+            <TextView
+                android:id="@+id/tv_i_want_know"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_i_want_know"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bottom_tab_xunmi"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+            <ImageView
+                android:id="@+id/iv_me"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/profile"
+                android:contentDescription="@null" />
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_me"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bottom_tab_profile"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="12sp" />
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
 
