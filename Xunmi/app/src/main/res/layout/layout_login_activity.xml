@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+<<<<<<< Updated upstream
     <EditText
         android:id="@+id/loginName"
         style="@android:style/Widget.AutoCompleteTextView"
@@ -52,3 +53,7 @@
         android:visibility="visible" />
 
 </RelativeLayout>
+=======
+
+</LinearLayout>
+>>>>>>> Stashed changes
