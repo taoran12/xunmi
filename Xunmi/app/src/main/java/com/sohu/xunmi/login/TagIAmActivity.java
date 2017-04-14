@@ -11,11 +11,9 @@ import com.sohu.xunmi.*;
 
 
 public class TagIAmActivity extends AppCompatActivity implements View.OnClickListener {
-    private String lableName[] = {"广发可选消费ETF", "上证物联网",
-            "恒生电子", "物联世界", "恒生期货", "恒生现金宝"
+    private String lableName[] = {"a","b"
     };
-    private String lableName1[] = {"恒生价值精选",
-            "恒生混合平衡", "恒生债券", "广发证券"
+    private String lableName1[] = {"c","d","e","f"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
