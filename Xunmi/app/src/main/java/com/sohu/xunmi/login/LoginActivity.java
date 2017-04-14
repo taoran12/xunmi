@@ -20,10 +20,15 @@ public class LoginActivity extends Activity implements DialogInterface.OnClickLi
         setContentView(R.layout.layout_login_activity);
         loginName = (EditText)findViewById(R.id.loginName);
         loginButton = (Button)findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(MainActivity.class);
+            }
+        });
     }
-    loginButton
 
-    @Override
+
     public void onClick(DialogInterface dialogInterface, int i) {
 
     }
