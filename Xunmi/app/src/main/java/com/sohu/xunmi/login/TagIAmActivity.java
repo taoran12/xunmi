@@ -18,7 +18,6 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_tag_iam_activity);
         initData();
         initView();
     }
