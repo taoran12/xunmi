@@ -1,7 +1,6 @@
 package com.sohu.xunmi.login;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,7 +15,7 @@ import com.sohu.xunmi.R;
  * Created by whisky on 2017/4/14.
  */
 
-public class LoginActivity extends Activity implements DialogInterface.OnClickListener, View.OnLongClickListener {
+public class LoginActivity extends Activity {
     EditText loginName, loginPass;
     Button loginButton;
 
@@ -41,17 +40,5 @@ public class LoginActivity extends Activity implements DialogInterface.OnClickLi
                 startActivity(intent);
             }
         });
-    }
-
-
-
-
-    public void onClick(DialogInterface dialogInterface, int i) {
-
-    }
-
-    @Override
-    public boolean onLongClick(View view) {
-        return false;
     }
 }

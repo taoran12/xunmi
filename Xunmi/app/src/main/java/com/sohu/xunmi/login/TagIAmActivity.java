@@ -1,106 +1,42 @@
 package com.sohu.xunmi.login;
 
-
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.sohu.xunmi.R;
+import com.zhy.view.flowlayout.FlowLayout;
+import com.zhy.view.flowlayout.TagAdapter;
+import com.zhy.view.flowlayout.TagFlowLayout;
+
+import java.util.ArrayList;
+
+
+public class TagIAmActivity extends Activity {
+    TagFlowLayout tagFlowLayout;
+    Button iwantButton;
 
 
 
-public class TagIAmActivity extends AppCompatActivity implements View.OnClickListener {
-    private String lableName[] = {"a","b"
-    };
-    private String lableName1[] = {"c","d","e","f"
-    };
-    Button iWantButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ArrayList<String> iamTags = new ArrayList<String>();
+
+        iamTags.add("a");
+        iamTags.add("b");
         super.onCreate(savedInstanceState);
-        iWantButton = (Button) findViewById(R.id.iam_button);
-//        iWantButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //
-//
-//                //
-//                Intent intent = new Intent();
-//
-//                intent.setClass(TagIAmActivity.this, TagIAmActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-        initData();
-        initView();
-    }
-    LabelLayout labelLayout, labelLayoutall;
-    ViewGroup.MarginLayoutParams lp;
-    public void initData() {
-    }
-    private void initView() {
+        tagFlowLayout = (TagFlowLayout)findViewById(R.id.iam_flowlayout);
+        tagFlowLayout.setAdapter(new TagAdapter<String>(iamTags)
+        {
+            @Override
+            public View getView(FlowLayout parent, int position, String s) {
+                return null;
+            }
+        });
+        //flowLayout = (FlowLayout)findViewById(R.id.);
 
-        lp = new ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        lp.leftMargin = 5;
-        lp.rightMargin = 5;
-        lp.topMargin = 5;
-        lp.bottomMargin = 5;
-
-        labelLayout = (LabelLayout) findViewById(R.id.iam_flow);
-        labelLayoutall = (LabelLayout) findViewById(R.id.iam_flow_all);
-        for (String aLableName : lableName) {
-            TextView view = new TextView(this);
-            view.setText(aLableName);
-            view.setBackgroundColor(0);
-            view.setTag("up");
-            labelLayout.addView(view, lp);
-            view.setOnClickListener(this);
-        }
-
-        for (String aLableName : lableName1) {
-            TextView view = new TextView(this);
-            view.setText(aLableName);
-            view.setBackgroundColor(0);
-
-            view.setTag("down");
-            labelLayoutall.addView(view, lp);
-            view.setOnClickListener(this);
-        }
-    }
-
-    @Override
-    public void onClick(View view) {
-        String txt = ((TextView) view).getText().toString();
-        if (view.getTag().equals("up")) {
-            labelLayout.removeView(view);
-            labelLayout.invalidate();
-
-            TextView view1 = new TextView(this);
-            view1.setText(txt);
-            view1.setBackgroundColor(0);
-            view1.setTag("down");
-            view1.setOnClickListener(this);
-
-            labelLayoutall.addView(view1, lp);
-            labelLayoutall.invalidate();
-
-        } else if (view.getTag().equals("down")) {
-            labelLayoutall.removeView(view);
-            labelLayoutall.invalidate();
-
-            TextView view1 = new TextView(this);
-            view1.setText(txt);
-            view1.setBackgroundColor(0);
-            view1.setTag("up");
-            view1.setOnClickListener(this);
-
-            labelLayout.addView(view1, lp);
-            labelLayout.invalidate();
-        }
+        //iwantButton = (Button)findViewById(R.id.iwant)
     }
 }
-
