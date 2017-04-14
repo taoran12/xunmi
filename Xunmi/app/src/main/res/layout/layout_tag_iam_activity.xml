@@ -2,32 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:zhy="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
-    <com.nex3z.flowlayout.FlowLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:childSpacing="auto"
-        app:childSpacingForLastRow="align"
-        app:rowSpacing="8dp">
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="I am" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SUN"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MON"/>
-
-        <!--...-->
-
-    </com.nex3z.flowlayout.FlowLayout>
-    <Button
-        android:id="@+id/iwant_button"
+    <com.sohu.xunmi.login.LabelLayout
+        android:id="@+id/flow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iwant" />
+        android:layout_margin="20dp"
+        android:animateLayoutChanges="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="All" />
+
+    <com.sohu.xunmi.login.LabelLayout
+        android:id="@+id/flow_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:animateLayoutChanges="true" />
 </LinearLayout>

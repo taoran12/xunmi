@@ -9,34 +9,29 @@
         android:id="@+id/loginName"
         style="@android:style/Widget.AutoCompleteTextView"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="46dp"
+        android:layout_height="50dp"
         android:layout_weight="0.80"
         android:hint="username"
-        android:paddingTop="100dp"
-        android:selectAllOnFocus="false"
+        android:maxLines="1"
         android:textAlignment="center"
-        android:visibility="visible"
-        android:layout_alignBottom="@+id/loginPassword"
+        android:layout_above="@+id/loginPassword"
         android:layout_alignStart="@+id/loginPassword" />
 
     <EditText
         android:id="@+id/loginPassword"
-        style="@android:style/Widget.AutoCompleteTextView"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="13dp"
+        android:maxLines="1"
+        android:layout_height="50dp"
         android:layout_weight="0.80"
         android:hint="password"
         android:inputType="numberDecimal"
-        android:paddingTop="100dp"
-        android:selectAllOnFocus="false"
+
         android:textAlignment="center"
         android:visibility="visible"
         android:layout_above="@+id/loginButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
 
     <Button
         android:id="@+id/loginButton"
@@ -46,12 +41,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="191dp"
         android:layout_weight="0.14"
+        android:background="@android:color/holo_purple"
+        android:elevation="11dp"
         android:text="login"
         android:textAlignment="center"
-        android:textSize="10sp"
-        android:visibility="visible" />
+        android:textStyle="bold" />
 
 </RelativeLayout>
 

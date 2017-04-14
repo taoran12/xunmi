@@ -22,8 +22,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.loopj.android:android-async-http:1.4.9'
-    compile 'com.nex3z:flow-layout:0.1.3'
-
 
 
 
