@@ -8,15 +8,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.sohu.xunmi.MainActivity;
 import com.sohu.xunmi.R;
 
 
-public class TagIAmActivity extends AppCompatActivity implements View.OnClickListener {
+public class TagIWantActivity extends AppCompatActivity implements View.OnClickListener {
     private String lableName[] = {"a", "b", "c"
     };
     private String lableName1[] = {"d", "e", "f", "g", "h"
     };
-
+    LabelLayout labelLayout, labelLayoutall;
+    ViewGroup.MarginLayoutParams lp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,20 +28,20 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(TagIAmActivity.this, TagIWantActivity.class);
+                intent.setClass(TagIWantActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish();
             }
+
         });
         initData();
         initView();
+
     }
 
     public void initData() {
     }
 
-    LabelLayout labelLayout, labelLayoutall;
-    ViewGroup.MarginLayoutParams lp;
+
 
     private void initView() {
 
@@ -49,8 +51,8 @@ public class TagIAmActivity extends AppCompatActivity implements View.OnClickLis
         lp.topMargin = 5;
         lp.bottomMargin = 5;
 
-        labelLayout = (LabelLayout) findViewById(R.id.iam_flow);
-        labelLayoutall = (LabelLayout) findViewById(R.id.iam_flow_all);
+        labelLayout = (LabelLayout) findViewById(R.id.iwant_flow);
+        labelLayoutall = (LabelLayout) findViewById(R.id.iwant_flow_all);
         for (String aLableName : lableName) {
             TextView view = new TextView(this);
             view.setText(aLableName);
