@@ -29,7 +29,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_toEndOf="@+id/iam_flow_all" />
+        android:layout_toEndOf="@+id/iwant_flow_all" />
 
     <TextView
         android:layout_width="match_parent"
