@@ -15,7 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".login.TagIAmActivity"
+            android:label="Xunmi"
+            >
 
+        </activity>
     </application>
 
 </manifest>
+

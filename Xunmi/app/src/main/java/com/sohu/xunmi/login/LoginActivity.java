@@ -34,7 +34,7 @@ public class LoginActivity extends Activity implements DialogInterface.OnClickLi
                 Editable userPassword = loginPass.getText();
                 //push name&password
                 Intent intent = new Intent();
-                intent.setClass(LoginActivity.this, TagIAm.class);
+                intent.setClass(LoginActivity.this, TagIAmActivity.class);
                 startActivity(intent);
                 finish();
             }
